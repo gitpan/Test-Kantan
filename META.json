@@ -67,7 +67,7 @@
    "provides" : {
       "Test::Kantan" : {
          "file" : "lib/Test/Kantan.pm",
-         "version" : "0.35"
+         "version" : "0.36"
       },
       "Test::Kantan::Builder" : {
          "file" : "lib/Test/Kantan/Builder.pm"
@@ -126,5 +126,5 @@
          "web" : "https://github.com/tokuhirom/Test-Kantan"
       }
    },
-   "version" : "0.35"
+   "version" : "0.36"
 }

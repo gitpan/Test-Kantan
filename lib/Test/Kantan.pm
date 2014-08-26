@@ -3,7 +3,7 @@ use 5.010_001;
 use strict;
 use warnings;
 
-our $VERSION = "0.35";
+our $VERSION = "0.36";
 
 use parent qw(Exporter);
 
@@ -127,10 +127,12 @@ sub Then  { _step('Then', @_) }
 sub _suite {
     my ($env_key, $tag, $title, $code) = @_;
 
-    my $filter = $ENV{$env_key};
-    if (defined($filter) && length($filter) > 0 && $title !~ /$filter/) {
-        builder->reporter->step("SKIP: ${title}");
-        return;
+    if (defined($env_key)) {
+        my $filter = $ENV{$env_key};
+        if (defined($filter) && length($filter) > 0 && $title !~ /$filter/) {
+            builder->reporter->step("SKIP: ${title}");
+            return;
+        }
     }
 
     my $suite = Test::Kantan::Suite->new(
