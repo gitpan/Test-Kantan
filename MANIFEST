@@ -82,6 +82,7 @@ t/01_simple.t
 t/02_expect.t
 t/03_spy.t
 t/04_log_minimal.t
+t/05_bdd.t
 t/Util.pm
 t/cases/log_minimal.expected
 t/cases/log_minimal.required

@@ -3,7 +3,7 @@ use 5.010_001;
 use strict;
 use warnings;
 
-our $VERSION = "0.36";
+our $VERSION = "0.37";
 
 use parent qw(Exporter);
 
@@ -157,9 +157,9 @@ sub Scenario { _suite('KANTAN_FILTER_SCENARIO', 'Scenario', @_) }
 sub subtest  { _suite('KANTAN_FILTER_SUBTEST', undef, @_) }
 
 # BDD compat
-sub describe { _suite(     undef, @_) }
-sub context  { _suite(     undef, @_) }
-sub it       { _suite(     undef, @_) }
+sub describe { _suite(     undef, undef, @_) }
+sub context  { _suite(     undef, undef, @_) }
+sub it       { _suite(     undef, undef, @_) }
 
 sub expect {
     my $stuff = shift;
@@ -253,6 +253,8 @@ Test::Kantan - simple, flexible, fun "Testing framework"
       };
     };
   };
+
+  done_testing;
 
 =head1 DESCRIPTION
 
