@@ -1,5 +1,9 @@
 Revision history for Perl extension Test-Kantan
 
+0.38 2014-09-15T02:04:19Z
+
+    - Added documentation(moznion)
+
 0.37 2014-08-31T19:31:16Z
 
     - fixed bdd style dsl.
