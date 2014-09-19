@@ -3,7 +3,7 @@ use 5.010_001;
 use strict;
 use warnings;
 
-our $VERSION = "0.38";
+our $VERSION = "0.39";
 
 use parent qw(Exporter);
 
@@ -347,6 +347,40 @@ Diagnostic message would not print if whole test cases in the subtest were passe
 
 It means, you can call diag() without worries about the messages is a obstacle.
 
+=head2 C<ignore()>
+
+The same as L<Test::Deep::NoTest>'s one. See also L<Test::Deep/ignore()>
+
+=head2 C<spy_on()>
+
+The same as L<"spy_on()" in Module::Spy|Module::Spy/my-spy-spy_on-class-object-method>
+
+=head2 C<skip_all()>
+
+Skips all of the tests that are in the hereafter.
+
+=head1 Hooks
+
+=head2 C<setup()>
+
+    setup { do_something() };
+
+C<setup> blocks are run before each example C<setup> blocks are run once before all of the examples in a group.
+
+=head2 C<teardown()>
+
+    teardown { do_something() };
+
+C<teardown> blocks are run after each example C<teardown> blocks are run once after all of the examples in a group.
+
+=head2 C<before_each()>
+
+Alias of C<setup()>.
+
+=head2 C<after_each>
+
+Alias of C<teardown()>.
+
 =head1 ENVIRONMENT VARIABLES
 
 =over 4
@@ -396,4 +430,7 @@ Tokuhiro Matsuno E<lt>tokuhirom@gmail.comE<gt>
 
 moznion
 
+Kuniwak
+
 =cut
+
