@@ -29,7 +29,7 @@ no_index:
 provides:
   Test::Kantan:
     file: lib/Test/Kantan.pm
-    version: '0.39'
+    version: '0.40'
   Test::Kantan::Builder:
     file: lib/Test/Kantan/Builder.pm
   Test::Kantan::Caller:
@@ -75,7 +75,8 @@ resources:
   bugtracker: https://github.com/tokuhirom/Test-Kantan/issues
   homepage: https://github.com/tokuhirom/Test-Kantan
   repository: git://github.com/tokuhirom/Test-Kantan.git
-version: '0.39'
+version: '0.40'
 x_contributors:
   - 'moznion <moznion@gmail.com>'
   - 'Kuniwak <yuki.kokubun@mixi.co.jp>'
+  - 'Kuniwak <orga.chem.job@gmail.com>'
